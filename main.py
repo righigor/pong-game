@@ -59,8 +59,8 @@ start_button.place(x=371, y=184)
 # Variáveis de movimentação
 paddle1_speed = 0
 paddle2_speed = 0
-ball_speed_x = 3
-ball_speed_y = 3
+ball_speed_x = 5
+ball_speed_y = 5
 
 # Movimentação dos paddles
 def move_paddle1(event):
@@ -116,7 +116,6 @@ def update_game():
     # Verificar colisão com as bordas
     if ball_coords[1] <= 0 or ball_coords[3] >= 400:
         ball_speed_y = -ball_speed_y
-
     # Verificar colisão com os paddles
     if (ball_coords[0] <= paddle1_coords[2] and paddle1_coords[1] < ball_coords[3] and paddle1_coords[3] > ball_coords[1]) or \
        (ball_coords[2] >= paddle2_coords[0] and paddle2_coords[1] < ball_coords[3] and paddle2_coords[3] > ball_coords[1]):
